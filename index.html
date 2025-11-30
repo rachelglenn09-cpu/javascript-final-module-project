@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 class="main-title">Wellness Dashboard</h1>
+        <p class="title-description">A daily check-in for your well-being</p>
+    </header>
+<!-- Div Container for API Grid -->
+    <div id="api-grid-container" class="grid-container">
+        <!-- Grid Item for Weather API -->
+        <div class="grid-item" id="weather-api">
+            <h2 class="api-title">Weather Report &#127780</h2>
+            <p class="api-description">View the current weather in Los Angeles</p>
+            <button class="api-button" id="weather-button" onclick="getWeather()">View</button>
+            <div id="weather-result" class="api-result"></div>
+        </div>
+        <!-- Grid Item for Random Advice Generator API -->
+        <div class="grid-item" id="advice-api">
+            <h2 class="api-title">Advice Hub &#128483;</h2>
+            <p class="api-description">Get a piece of random advice to brighten your day</p>
+            <button class="api-button" id="advice-button" onclick="getAdvice()">Generate</button>
+            <div id="advice-result" class="api-result"></div>
+        </div>
+        <!-- Grid Item for Inspirational Quotes API -->
+        <div class="grid-item" id="quotes-api">
+            <h2 class="api-title">Daily Quotes &#x1F4AC</h2>
+            <p class="api-description">Receive an inspirational quote to motivate you</p>
+            <button class="api-button" id="quote-button" onclick="getQuote()">Generate</button>
+            <div id="quote-result" class="api-result"></div>
+        </div>
+        <!-- Grid Item for Horoscope API -->
+        <div class="grid-item" id="horoscope-api">
+            <h2 class="api-title">Daily Horoscope &#10024;</h2>
+            <p class="api-description">Choose your sign from the dropdown list:</p>
+            <select id="horoscope-sign" class="api-dropdown">
+                <option value="Aries">Aries</option>
+                <option value="Taurus">Taurus</option>
+                <option value="Gemini">Gemini</option>
+                <option value="Cancer">Cancer</option>
+                <option value="Leo">Leo</option>
+                <option value="Virgo">Virgo</option>
+                <option value="Libra">Libra</option>
+                <option value="Scorpio">Scorpio</option>
+                <option value="Sagittarius">Sagittarius</option>
+                <option value="Capricorn">Capricorn</option>
+                <option value="Aquarius">Aquarius</option>
+                <option value="Pisces">Pisces</option>
+            </select>
+            <button class="api-button" id="horoscope-button" onclick="getHoroscope()">View</button>
+            <div id="horoscope-result" class="api-result"></div>
+        </div>
+        <!-- Grid Item For Tarot Reading API -->
+        <div class="grid-item" id="tarot-api">
+            <h2 class="api-title">Tarot Reading &#128302;</h2>
+            <p class="api-description">Pull a single tarot card for insight</p>
+            <button class="api-button" id="tarot-button" onclick="getTarotReading()">Pull Card</button>
+            <div id="tarot-result" class="api-result"></div>
+        </div>
+        <!-- Grid Item For Magic 8 Ball API -->
+        <div class="grid-item" id="magic8ball-api">
+            <h2 class="api-title">Magic 8 Ball &#127921;</h2>
+            <p class="api-description">Generate an answer to your yes/no question</p>
+            <input type="text" id="magic8ball-question" class="api-input" placeholder="Ask your question..." required>
+            <button class="api-button" id="magic8ball-button" onclick="getMagic8BallAnswer()">Ask</button>
+            <div id="magic8ball-result" class="api-result"></div>
+        </div>
+        <!-- Grid Item For Moon Phase API -->
+        <div class="grid-item" id="moonphase-api">
+            <h2 class="api-title">Lunar Calendar &#127773;</h2>
+            <p class="api-description">View the current moon phase</p>
+            <button class="api-button" id="moonphase-button" onclick="getMoonPhase()">View</button>
+            <div id="moonphase-result" class="api-result"></div>
+        </div>
+        <!-- Grid Item For Daily Affirmation API -->
+        <div class="grid-item" id="affirmation-api">
+            <h2 class="api-title">Daily Affirmation &#128591;</h2>
+            <p class="api-description">Receive an affirmation to kickstart your day</p>
+            <button class="api-button" id="affirmation-button" onclick="getAffirmation()">Get Affirmation</button>
+            <div id="affirmation-result" class="api-result"></div>    
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

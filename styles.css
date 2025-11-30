@@ -1,0 +1,180 @@
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a878ac;
+}
+
+/* Header Styles */
+header {
+    background-color: #361d44;
+    color: #f5ecd9;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+/* Adding spacing between header elements */
+header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 400%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* grid-container class styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+/* grid-item class styles */
+.grid-item {
+    background-color: #f5ecd9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #361d44;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* Hover animations for grid items */
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* font class styles for grid items*/
+.api-title {
+    font-size: 200%;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.api-description {
+    font-style: italic;
+    margin-bottom: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* api-button class styles */
+.api-button {
+    background-color: #361d44;
+    color: #f5ecd9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.api-button:hover {
+    background-color: #5a3a6e;
+}
+.api-button:active {
+    background-color: #2e122e;
+    /* transform styles when clicked */
+    transform: scale(0.95);
+}
+/* api-dropdown styles */
+.api-dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 100%;
+    margin-top: 10px;
+    background-color: #a878ac;
+    /* getting rid of inner bevel effect */
+    appearance: none;
+    color: #361d44;
+    /* adding a new simplistic down arrow button styled dark purple */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><polygon points="0,0 10,0 5,6" fill="%23361d44"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 6px;
+    text-align: center;
+    border: #361d44 3px solid;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.api-dropdown:focus {
+    outline: none;
+}
+.api-dropdown:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(54, 29, 68, 0.22);
+}
+/* api-input styles */
+.api-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 100%;
+    margin-top: 10px;
+    width: 80%;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    appearance: none;   
+    background-color: #a878ac;
+    color: #361d44; 
+    border: #361d44 3px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: center;
+}
+/* Remove default blue focus ring on mouse focus, keep an accessible visible focus for keyboard users */
+.api-input:focus {
+    outline: none;
+}
+.api-input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(54, 29, 68, 0.22);
+}
+::placeholder {
+    color: #361d44;
+    opacity: 0.7;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(5deg); }
+  40% { transform: rotate(-5deg); }
+  60% { transform: rotate(4deg); }
+  80% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.moon-phase-image {
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}   
